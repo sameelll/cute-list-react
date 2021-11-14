@@ -1,6 +1,5 @@
 const Form = ({ inputText, setInputText, todos, setTodos}) => {
     const inputTextHandler = (e) => {
-        console.log(e);
         setInputText(e.target.value);      
     };
     const submitTodoHandler = (e) => {
@@ -8,7 +7,7 @@ const Form = ({ inputText, setInputText, todos, setTodos}) => {
         setTodos([
             ...todos, {text: inputText, completed: false, id: Math.random() * 1000}
         ]);
-        setInputText('');
+        setInputText("");
     };
 
     return (
